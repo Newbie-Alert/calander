@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { PRIMARY_COLOR } from "../../styles/const";
+import styled from 'styled-components';
+import { PRIMARY_COLOR } from '../../styles/const';
 
 export const SelectBox = styled.div`
   width: fit-content;
@@ -14,8 +14,6 @@ export const SelectBox = styled.div`
   cursor: pointer;
   position: relative;
 `;
-
-
 
 export const OptionListBox = styled.ul`
   width: 100%;

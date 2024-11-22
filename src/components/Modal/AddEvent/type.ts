@@ -1,7 +1,3 @@
-
-
-
-
 export type AddInfo = {
   year: number;
   month: number;

@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import { AddInfo } from "./type";
-import { Props } from "./AddEvent";
+import React, { useState } from 'react';
+import { AddInfo } from './type';
+import { Props } from './AddEvent';
 
 export default function useAddEvent({ day }: Props) {
   const [addInfo, setAddInfo] = useState<AddInfo>({
     year: day.year,
     month: day.month,
     day: day.day,
-    title: "",
-    content: "",
-    createdAt: "",
+    title: '',
+    content: '',
+    createdAt: ''
   });
 
   const handleInfoChange = (e: React.MouseEvent<HTMLLIElement>) => {
