@@ -13,13 +13,31 @@ export const MEDIUM_FONT = css`
 
 export type RowBoxProps = {
   gap?: number;
+  justify?: "space-between" | "center" | "flex-start";
+  width?: number;
+  margin?: "right" | "center";
 };
 
 export const RowAttrs = css<RowBoxProps>`
-  width: fit-content;
+  width: ${({ width }) => (width ? `${width}%` : "fit-content")};
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: ${({ justify }) => (justify ? justify : "flex-start")};
   gap: ${({ gap }) => (gap ? `${gap}rem` : "1rem")};
-  margin: 0 auto;
+  ${({ margin }) => {
+    switch (margin) {
+      case "right":
+        return css`
+          margin-right: auto;
+        `;
+      case "center":
+        return css`
+          margin: 0 auto;
+        `;
+      default:
+        return css`
+          margin: 0;
+        `;
+    }
+  }}
 `;

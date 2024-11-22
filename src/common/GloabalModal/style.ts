@@ -39,7 +39,10 @@ export const GlobalModalTitle = styled.div`
   padding: 1.6rem;
   font-size: 2rem;
   font-weight: 700;
-  background-color: #e5e5e5;
+  background-color: #292929;
+  color: #fff;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
 `;
 
 export const GlobalModalSubTitle = styled.div`

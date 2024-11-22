@@ -122,5 +122,6 @@ export default function useDate() {
     totalWeeks,
     dayOfWeek,
     createCalendarDays,
+    lastDayOfMonth,
   };
 }

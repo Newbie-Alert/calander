@@ -4,7 +4,7 @@ import { Props } from "./type";
 
 export default function DateSelector({ date, onClick }: Props) {
   return (
-    <St.RowBox gap={4}>
+    <St.RowBox gap={4} margin="center">
       <St.DateSelectorButton
         aria-label="이전 달 버튼"
         type="prev"

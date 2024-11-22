@@ -2,6 +2,7 @@ import React from "react";
 import { Days } from "../../hooks/date/type";
 import * as St from "./style";
 import { useGlobalModal } from "../../context/GlobalModalContext";
+import AddEvent from "../Modal/AddEvent/AddEvent";
 
 type Props = {
   days: Days[];
@@ -12,9 +13,10 @@ type Props = {
 export default function CalanderGrid({ days, row, dayOfWeek }: Props) {
   const { setModal } = useGlobalModal();
 
+  // 일정 추가 모달 띄우기
   const handleClickDay = (day: Days) => {
     setModal({
-      component: <div>test</div>,
+      component: <AddEvent day={day} />, //!TODO: day를 활용하여 그려지는 컴포넌트 추가
       title: "일정 추가",
       text: "test",
     });
